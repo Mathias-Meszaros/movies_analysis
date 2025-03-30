@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def load_data():
-    file_path = "C:\\Users\\mesza\\Desktop\\Portfolio\\movies_analysis\\movies.csv"
+    file_path = "C:\\Users\\mesza\\Desktop\\Portfolio\\movies_analysis\\movies_cvs.csv"
     try:
        
         df = pd.read_csv(file_path, encoding="ISO-8859-1")  # Próbálkozás ISO-8859-1 kódolással
