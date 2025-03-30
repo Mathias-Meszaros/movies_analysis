@@ -3,13 +3,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def load_data():
-    file_path = "C:\\Users\\mesza\\Desktop\\movies_analysis\\movies_cvs.csv"
+    file_path = "C:\\Users\\mesza\\Desktop\\Portfolio\\movies_analysis\\movies_cvs.csv"
     try:
        
         df = pd.read_csv(file_path, encoding="ISO-8859-1")  # Próbálkozás ISO-8859-1 kódolással
     except Exception as e:
-        st.error(f"Hiba történt a fájl beolvasása közben: {e}")
-        print(f"Hiba történt a fájl beolvasása közben: {e}")
+        st.error(f"An error occurred while reading the file: {e}")
+        print(f"An error occurred while reading the file.: {e}")
         return None
     return df
 
@@ -19,11 +19,11 @@ df = load_data()
 # Ha a dataframe nem üres, folytathatjuk
 if df is not None:
     # Streamlit alkalmazás beállítása
-    st.title("Filmelemző Dashboard")
-    st.write("Bemutatjuk a filmek statisztikai elemzését és vizualizációit.")
+    st.title("Movie Analysis Dashboard")
+    st.write("Statistical analysis and visualizations of films")
 
     # Adatok megjelenítése
-    if st.checkbox("Adatok megjelenítése"):
+    if st.checkbox("Database"):
         st.dataframe(df)
 
     # Pie chart a filmek értékelési kategóriái alapján
@@ -36,8 +36,8 @@ if df is not None:
             return "Low Rated"
 
     # Kategóriák létrehozása a 'Rating' oszlop alapján
-    df["Rating_Category"] = df["Rating"].apply(categorize_rating)
-    category_counts = df["Rating_Category"].value_counts()
+    df["Rating Category"] = df["Rating"].apply(categorize_rating)
+    category_counts = df["Rating Category"].value_counts()
 
     # Pie chart a filmek kategóriáiról
     fig, ax = plt.subplots()
@@ -49,14 +49,14 @@ if df is not None:
     year_counts = df["Year"].value_counts().sort_index()
     fig, ax = plt.subplots()
     ax.bar(year_counts.index, year_counts.values, color="skyblue")
-    ax.set_xlabel("Év")
-    ax.set_ylabel("Film darabszám")
-    ax.set_title("Megjelenések száma évenként")
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Number of movies")
+    ax.set_title("Number of publications per year")
     st.pyplot(fig)
 
     # Legnagyobb profitot termelő filmek megjelenítése
     top_profit_movies = df.sort_values(by="Profit", ascending=False).head(10)
-    st.subheader("Top 10 legtöbb profitot termelő film")
+    st.subheader("Top 10 highest-grossing films")
     st.dataframe(top_profit_movies)
 else:
-    st.error("A fájl betöltése nem sikerült.")
+    st.error("The file could not be loaded.")
