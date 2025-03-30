@@ -5,7 +5,7 @@ This project analyzes movies with above-average IMDb ratings from the past decad
 There are two ways to view the analysis.
 
 ### 1️⃣ SQL and Power BI version
-- **How to Set Up the SQL Database**
+- **Set Up the SQL Database**
 
 ### 
 1. Open SQL Server Management Studio (SSMS).
