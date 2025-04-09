@@ -6,7 +6,7 @@ There are two ways to view the analysis.
 
 ### 1️⃣ Streamlit Webapp (Recommended)
 The first is through the Streamlit Dashboard, which presents results, graphs, and accompanying summary content.:
-**[Streamlit Dashboard](https://movies-streamlit-example.herokuapp.com)**
+**[Streamlit Dashboard](https://moviesanalysis-hynvk5spgmclt5wvzjk5bm.streamlit.app/)**
 
 ### 2️⃣ SQL and Power BI version
 - **Set Up the SQL Database**
