@@ -2,9 +2,10 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 def load_data ():
-    file_path = "C:\\Users\\mesza\\Desktop\\Portfolio\\movies_analysis\\movies.csv"
+    file_path =  os.path.join(os.path.dirname(__file__), "movies.csv")
     try:
         df = pd .read_csv (file_path, encoding = "ISO-8859-1") 
     except Exception as e:
