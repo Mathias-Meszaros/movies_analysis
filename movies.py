@@ -512,7 +512,7 @@ if df is not None:
 
     st .write ("The best films rated by critics, decade by decade.")
 
-    st .title ("Final assessment of the ")
+    st .title ("Final assessment of the analysis")
 
     # Top 10 Longes Movies
 
