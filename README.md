@@ -5,7 +5,7 @@ This project analyzes movies with above-average IMDb ratings from the past decad
 There are two ways to view the analysis.
 
 ### 1️⃣ Streamlit Webapp (Recommended)
-The first is through the Streamlit application, which presents results, graphs, and accompanying summary content.:
+The first is through the Streamlit Dashboard, which presents results, graphs, and accompanying summary content.:
 **[Streamlit Dashboard](https://movies-streamlit-example.herokuapp.com)**
 
 ### 2️⃣ SQL and Power BI version
