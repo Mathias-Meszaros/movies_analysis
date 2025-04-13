@@ -16,3 +16,5 @@ The first is through the Streamlit Dashboard, which presents results, graphs, an
 2. Run `movies_database.sql` to create the database and import data.
 3. Run `movies_analysis.sql` to perform the analysis.
 4. Open the `movies.pbix` file in Power BI.
+
+The source of the data is Kaggle.com.
